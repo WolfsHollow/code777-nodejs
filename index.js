@@ -8,7 +8,9 @@ import { DECK, QUESTION_BANK, TYPE } from './constants.js'
 import { shuffle } from './helpers.js';
 import { RoomData } from './RoomData.js';
 
-const wss = new WebSocketServer({ port: 8082 });
+const PORT = process.env.PORT || 8082;
+
+const wss = new WebSocketServer({ port: PORT });
 
 const rooms = {}; // {roomID: {player: playerNumber}}
 const roomData = {}; // {roomID: {deck:deck, questions: questions, players: [players], playersInRoom: {}}}

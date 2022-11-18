@@ -99,7 +99,6 @@ export class RoomData {
                 'isGameOver': isGameOver,
             }
         }
-
         return JSON.stringify(newMessage);
     }
 
@@ -121,6 +120,8 @@ export class RoomData {
         for (let i = 0; i < this.players.length; i++) {
             newHands[i] = newDeck.splice(0, 3);
         }
+        this.deck = newDeck;
+        this.hands = newHands;
 
         let payloadToSend = {
             'deck': newDeck,

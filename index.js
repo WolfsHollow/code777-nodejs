@@ -1,6 +1,6 @@
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-}
+// if (process.env.NODE_ENV !== 'production') {
+//     require('dotenv').config();
+// }
 
 import { v4 as uuidv4 } from 'uuid';
 import { WebSocketServer } from 'ws';
@@ -8,7 +8,7 @@ import { DECK, QUESTION_BANK, TYPE } from './constants.js'
 import { shuffle } from './helpers.js';
 import { RoomData } from './RoomData.js';
 
-const PORT = process.env.PORT || 8082;
+const PORT = process.env.PORT || 8080;
 
 const wss = new WebSocketServer({ port: PORT });
 

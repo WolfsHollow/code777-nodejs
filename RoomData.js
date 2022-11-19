@@ -81,7 +81,8 @@ export class RoomData {
         let newHand = newDeck.splice(0, 3);
 
         if (newDeck.length <= 7) {
-            newDeck = shuffle(this.discardPile)
+            let concat = [...newDeck, ...this.discardPile]
+            newDeck = shuffle(concat)
             this.discardPile = [];
         }
 

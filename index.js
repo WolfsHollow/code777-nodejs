@@ -18,6 +18,7 @@ const USER_LIST = 'userList';
 
 wss.on("connection", socket => {
     let user;
+
     let roomsJoined = [];
 
     const broadcastToRoom = (roomID, message, sender) => {
